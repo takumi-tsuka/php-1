@@ -49,7 +49,7 @@
                     }
                 }
                 // array_push($totalAvg,$sum/count($marks));
-                $totalAvg[$names] = $sum/count($marks);
+                $totalAvg[$names] = $sum/count($marks); //$totalAvg = [$names => $sum/count($marks)];
                 echo "<td>$max</td><td>$min</td><td>".$sum/count($marks)."</td>";
                 echo "</tr>";
                 if($Max < $max){
