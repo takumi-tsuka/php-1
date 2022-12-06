@@ -16,10 +16,11 @@
     $newdoc1 = new doctor("shotaro","ogata","1940","Cardiorogy",234523455);
     // print_r($newdoc->show_info());
     $newdoc2 = new doctor("yusuke","ogata","1945","Cardiorogy",123412341);
-    array_push($newArray,$newdoc);
-    array_push($newArray,$newdoc1);
-    array_push($newArray,$newdoc2);
-    print_r($newArray);
+    // array_push($newArray,$newdoc);
+    // array_push($newArray,$newdoc1);
+    // array_push($newArray,$newdoc2);
+    $newArray = [$newdoc,$newdoc1,$newdoc2];
+    // print_r($newArray);
 
     ?>
     <table border="1">
