@@ -52,19 +52,19 @@
                 // $height = getimagesize(($uploadedFile['tmp_name']))[1];
                 $srcPath = $uploadedFile['tmp_name'];
                 $dstPath = $targetdir.$uploadedFile['name'];
-                // $getImg = getimagesize($dstPath);
-                // $width = $getImg[0];
-                // $height = $getImg[1];
-                // if($width > 500 || $height > 500){
+                $getImg = getimagesize($dstPath);
+                $width = $getImg[0];
+                $height = $getImg[1];
+                if($width > 800 || $height > 800){
                     if(fileUpload($srcPath,$dstPath)){
                         header("Location: ".$_SERVER['PHP_SELF']."?picurl=$dstPath&msg=$srcPath");
                         exit();
                     }else{
                 
                     }
-                // }else{
-                //     echo "<h3>Image's height or width is too small so not uploaded</h3>";
-                // }
+                }else{
+                    echo "<h3>Image's height or width is too small so not uploaded</h3>";
+                }
             }else{
                 echo "<h3>File is not accepted image type. (JPG,PNG,JPEG,GIF)</h3>";
             } 
