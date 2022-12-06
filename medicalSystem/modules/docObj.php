@@ -1,11 +1,11 @@
 <?php
     class doctor{
-        public $firstName;
+        public $firstName; //container
         public $lastName;
         public $dob;
         public $speciality;
         public $medID;
-        function __construct($firstName, $lastName, $dob, $speciality, $medID)
+        function __construct($firstName, $lastName, $dob, $speciality, $medID)  //construct
         {
             $this->firstName = $firstName;
             $this->lastName = $lastName;

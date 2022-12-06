@@ -12,13 +12,17 @@
     $newArray = [];
     $newdoc = new doctor("Nao","Ogata","1935","Cardiorogy",258745968);
     // $newArray = array_push($newArray,$newdoc);
-    // print_r($newdoc->show_info());
+    print_r($newdoc->show_info());
+    print_r($newdoc);
     $newdoc1 = new doctor("shotaro","ogata","1940","Cardiorogy",234523455);
     // print_r($newdoc->show_info());
     $newdoc2 = new doctor("yusuke","ogata","1945","Cardiorogy",123412341);
+    
+    // My Way!
     // array_push($newArray,$newdoc);
     // array_push($newArray,$newdoc1);
     // array_push($newArray,$newdoc2);
+    
     $newArray = [$newdoc,$newdoc1,$newdoc2];
     // print_r($newArray);
 
