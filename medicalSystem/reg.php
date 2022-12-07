@@ -6,13 +6,14 @@
     include './modules/docObj.php';
     include './data/config.php';
     if($_SERVER['REQUEST_METHOD']=="POST"){
-        $fname = $_POST['fname'];
-        $lname = $_POST['lname'];
-        $pass = $_POST['pass'];
-        $spec = $_POST['spec'];
-        $medid = $_POST['medid'];
-        $avatar = $_FILES['logoimg'];
-        $targetDir = "./data/avatars/";
+        $fname = $_POST['fname']; //name = "fname" in form of regform.php
+        $lname = $_POST['lname']; //name = "lname" in form of regform.php
+        $pass = $_POST['pass']; //name = "pass" in form of regform.php
+        $spec = $_POST['spec']; //name = "spec" in form of regform.php
+        $medid = $_POST['medid']; //name = "medid" in form of regform.php
+        $avatar = $_FILES['logoimg']; //file information of name = "logoimg" in form of regform.php
+        //Array([name] => test.csv　[type] => text/plain[tmp_name] => /tmp/php5dkdaFd [error] => 0[size] => 123)
+        $targetDir = "./data/avatars/";  //directory of target to put
         if($avatar['size']<400000){
             if($avatar['type']=="image/jpeg" || $avatar['type']=="image/jpg"){
                 if(getimagesize($avatar['tmp_name'])!== false){
@@ -36,7 +37,7 @@
                         exit();
 
                     }else{
-                        echo "$target not uploaded";
+                        echo "$targetDir not uploaded";
                     }
                 }else{
                     echo "its not an image?!!!!!";

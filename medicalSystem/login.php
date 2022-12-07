@@ -14,7 +14,7 @@
             $pass = $_POST['pass'];
             $file = fopen('./data/data.txt','r');
             $data = fread($file,filesize('./data/data.txt'));
-            fclose($file);
+            fclose($file);   //what is deference between fclose after decode and before decode?
             $users = json_decode($data,true);
             foreach($users as $user){
                 if($user['id']==$medid && $user['pass']==$pass){
@@ -26,7 +26,7 @@
             }
         }else{
             header("Location: ".$baseName."regform.php");
-            exit();
+            exit();        //deference between break and exit
         }
     }
 ?>
