@@ -1,69 +1,27 @@
-<?php include('./modules/docObj.php');?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <?php
-    $newArray = [];
-    $newdoc = new doctor("Nao","Ogata","1935","Cardiorogy",258745968);
-    // $newArray = array_push($newArray,$newdoc);
-    print_r($newdoc->show_info());
-    print_r($newdoc);
-    $newdoc1 = new doctor("shotaro","ogata","1940","Cardiorogy",234523455);
-    // print_r($newdoc->show_info());
-    $newdoc2 = new doctor("yusuke","ogata","1945","Cardiorogy",123412341);
-    
-    // My Way!
-    // array_push($newArray,$newdoc);
-    // array_push($newArray,$newdoc1);
-    // array_push($newArray,$newdoc2);
-    
-    $newArray = [$newdoc,$newdoc1,$newdoc2];
-    // print_r($newArray);
+<?php include './pages/header.php'; ?>
 
-    ?>
-    <table border="1">
-        <thead>
-            <tr>
-                <th>First name</th>
-                <th>last name</th>
-                <th>dob</th>
-                <th>speciality</th>
-                <th>medID</th>
-            </tr>
-        </thead>
-        <tbody>
-            <?php
-            foreach($newArray as $datas){
-                echo "<tr>";
-                foreach($datas as $data){
-                    echo "<td>$data</td>";
-                }
-                echo "</tr>";
-            }
-                
-                // echo "<tr>";
-                // foreach($newdoc as $datas){
-                //     echo "<td>".$datas."</td>";
-                // }
-                // echo "</tr>";
-                // echo "<tr>";
-                // foreach($newdoc1 as $datas){
-                //     echo "<td>".$datas."</td>";
-                // }
-                // echo "</tr>";
-                // echo "<tr>";
-                // foreach($newdoc2 as $datas){
-                //     echo "<td>".$datas."</td>";
-                // }
-                // echo "</tr>";
-            ?>
-        </tbody>
-    </table>
-</body>
-</html>
+<main>
+    <div class="container-fluid">
+        <div class="row justify-content-center align-items-center g-2">
+            <div class="col-4">
+                <form method="POST" action="<?php echo $baseName.'login.php'; ?>">
+                    <div class="form-floating mb-3">
+                      <input
+                        type="text"
+                        class="form-control" name="medid" placeholder="er">
+                      <label for="medid">Medical Number</label>
+                    </div>
+                    <div class="form-floating mb-3">
+                      <input
+                        type="password"
+                        class="form-control" name="pass" placeholder="er">
+                      <label for="medid">Password</label>
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Submit</button>
+                </form>                
+            </div>
+        </div>
+    </div>
+</main>
+    
+<?php include './pages/footer.php'; ?>

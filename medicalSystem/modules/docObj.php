@@ -1,20 +1,25 @@
 <?php
     class doctor{
-        public $firstName; //container
-        public $lastName;
-        public $dob;
-        public $speciality;
-        public $medID;
-        function __construct($firstName, $lastName, $dob, $speciality, $medID)  //construct
+        private $firstName;
+        private $lastName;
+        private $pass;
+        private $speciality;
+        private $medID;
+        private $imgurl;
+        function __construct($firstName, $lastName, $pass, $speciality, $medID,$imgurl)
         {
             $this->firstName = $firstName;
             $this->lastName = $lastName;
-            $this->dob = $dob;
+            $this->pass = $pass;
             $this->speciality = $speciality;
             $this->medID = $medID;
+            $this->imgurl = $imgurl;
         }
         function show_info(){
-            return ["fname"=>$this->firstName,"lname"=>$this->lastName,"dob"=>$this->dob,"spec"=>$this->speciality,"id"=>$this->medID];
+            return ["id"=>$this->medID,"fname"=>$this->firstName,"lname"=>$this->lastName,"pass"=>$this->pass,"spec"=>$this->speciality,"img"=>$this->imgurl];
+        }
+        function json_output(){
+            return json_encode($this->show_info());
         }
     }
 ?>
