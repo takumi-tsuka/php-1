@@ -16,7 +16,7 @@
         $targetDir = "./data/avatars/";  //directory of target to put
         if($avatar['size']<400000){
             if($avatar['type']=="image/jpeg" || $avatar['type']=="image/jpg"){
-                if(getimagesize($avatar['tmp_name'])!== false){
+                if(getimagesize($avatar['tmp_name'])!== false){  //Is it same as if(getimagesize($avatar['tmp_name']) == true){}?
                     $targetDir = $targetDir.$fname.rand(10,1000).".jpeg";
                     if(move_uploaded_file($avatar['tmp_name'],$targetDir)){
                         $imgurl = $targetDir;

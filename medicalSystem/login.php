@@ -18,7 +18,7 @@
             $users = json_decode($data,true);
             foreach($users as $user){
                 if($user['id']==$medid && $user['pass']==$pass){
-                    print_r($user);
+                    print_r($user);  //where?
                     $_SESSION['logUser'] =$user;
                     header("Location:".$baseName."profile.php");
                     break;
