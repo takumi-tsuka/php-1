@@ -22,6 +22,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="<?php echo $baseName.'regform.php'; ?>">Register</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="<?php echo $baseName.'patGallery.php'; ?>">Image gallery</a>
+                </li>
             </ul>
         </div>
     </nav>
