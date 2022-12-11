@@ -1,5 +1,5 @@
 <?php include './pages/header.php'; ?>
-<div class="row justify-content-center align-items-center g-2">
+<div class="row justify-content-center align-items-center g-2" style="width: 100%;">
     <div class="col-5">
         <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: <?php
             if(isset($_GET['msg'])) echo "block";

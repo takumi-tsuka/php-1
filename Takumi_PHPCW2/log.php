@@ -25,7 +25,7 @@
             }
         }
         if("takumi@test.com" == $email && "takumi" == $pass && $role == 'admin'){
-            $_SESSION['logUser'] = $tech;
+            $_SESSION['logUser'] = "takumi@test.com";
             header("Location: ".$baseName.'profileAdmin.php');
             exit();
         }
