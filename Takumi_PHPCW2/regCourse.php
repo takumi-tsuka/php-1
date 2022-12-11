@@ -3,7 +3,6 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
     $course = $_POST['course'];
     $stID = $_POST['student'];
     $newArray = ['stID'=>$stID,'mark'=>0];
-    print_r($newArray);
 
     if(!is_dir("./data/courses/$course")){
         mkdir("./data/courses/$course");
@@ -30,7 +29,6 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
             $file = fopen("./data/courses/$course/$course.json",'w');
             fwrite($file,json_encode($dataArray));
             fclose($file);
-            echo "<h1>added</h1>";
             header("Location: ".$baseName.'profileAdmin.php?msg=Added');
             exit();
         }
