@@ -21,7 +21,7 @@ if($_SERVER['REQUEST_METHOD']== "POST"){
         foreach($dataArray as $students){
             if($students['stID']==$newArray['stID']){
                 header("Location: ".$baseName."profileAdmin.php?aaa=Already exist so it couldn't be added");
-                exit;
+                exit();
             }
         }
         if($students['stID']!==$newArray['stID']){

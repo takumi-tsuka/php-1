@@ -36,8 +36,8 @@
             </script>
 <form method="post" action="<?php echo $baseName.'regCourse.php'?> " style="width: 75%; display: flex; flex-direction: column; align-items :center;">
     <div class="mb-3" style="width: 50%;">
-        <select class="form-select form-select-lg" name="course" ">
-        <option value="" disabled>selsct course</option>
+        <select class="form-select form-select-lg" name="course">
+        <option value="" disabled>select course</option>
         <option value="html">HTML</option>
         <option value="css">CSS</option>
         <option value="javascript">JavaScript</option>
